@@ -140,6 +140,35 @@ p.footer {
     animation: fadeIn 1s ease-in-out forwards;
 }
 
+/* Media Queries for iPhone 6 */
+@media only screen and (max-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
+    /* Add your styles for iPhone 6 here */
+    h2 {
+        font-size: 18px;
+    }
+
+    section div {
+        padding: 15px 10px;
+    }
+
+    section div img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tile {
+        margin: 3px;
+    }
+
+    a p {
+        font-size: 12px;
+    }
+
+    p.footer {
+        font-size: 8px;
+    }
+}
+
 @keyframes fadeIn {
     to {
         opacity: 1;
