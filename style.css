@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9; /* Set a light background color */
+}
+
+h2 {
+    color: #272727;
+    font-size: 24px;
+    margin-top: 10px;
+    opacity: 0; /* Set opacity to 0 to apply the fade-in animation */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+body>img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.6; /* Add some transparency to the background image */
+}
+
+section {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    inset: 0;
+    overflow-y: scroll;
+}
+
+section div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+section>div {
+    padding: 30px 20px;
+}
+
+section div img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a light shadow to the image */
+}
+
+a {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    gap: 10px;
+    align-items: center;
+    border-radius: 8px;
+    transition-duration: 200ms;
+}
+
+.tile:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+a i {
+    font-size: 1.3em;
+}
+
+a p {
+    font-size: 16px;
+}
+
+.tile {
+    margin: 10px;
+    box-shadow: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+p.footer {
+    font-size: 12px;
+    color: #272727;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    section div {
+        padding: 20px 10px;
+    }
+
+    section div img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .tile {
+        margin: 5px;
+    }
+
+    a i {
+        font-size: 1em;
+    }
+
+    a p {
+        font-size: 13px;
+    }
+
+    p.footer {
+        font-size: 10px;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
