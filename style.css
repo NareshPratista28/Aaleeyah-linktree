@@ -21,16 +21,6 @@ h2 {
     animation: fadeIn 1s ease-in-out forwards;
 }
 
-body>img {
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0.6; /* Add some transparency to the background image */
-}
-
 section {
     display: grid;
     place-items: center;
@@ -42,11 +32,10 @@ section {
 section div {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     width: 80%;
     max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
+    /* padding: 20px; */
     justify-content: center;
     align-items: center;
     border-radius: 10px; /* Rounded corners */
@@ -55,6 +44,10 @@ section div {
 
 section>div {
     padding: 30px 20px;
+}
+
+section h2{
+    margin: 20px;
 }
 
 section div img {
@@ -79,7 +72,7 @@ a {
     transition-duration: 200ms;
 }
 
-.tile:hover {
+.tile:hover{
     transform: scale(1.05); /* Slightly increase size on hover */
 }
 
@@ -92,7 +85,8 @@ a p {
 }
 
 .tile {
-    margin: 10px;
+    margin: 5px; /* Reduce the margin to make the spacing smaller */
+    min-width: 12.5rem;
     box-shadow: none;
     transition: transform 0.2s ease-in-out;
 }
@@ -103,14 +97,11 @@ p.footer {
     margin-top: 20px;
 }
 
-/* Media Queries */
+
 @media screen and (max-width: 768px) {
     h2 {
-        font-size: 20px;
-    }
-
-    section div {
-        padding: 20px 10px;
+        font-size: 18px;
+        margin-top: 8px; /* Reduce top margin for smaller screens */
     }
 
     section div img {
@@ -119,7 +110,7 @@ p.footer {
     }
 
     .tile {
-        margin: 5px;
+        margin: 3px; /* Reduce the margin for mobile devices */
     }
 
     a i {
@@ -135,20 +126,67 @@ p.footer {
     }
 }
 
-.fade-in {
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
+@media screen and (max-width: 320px) {
+    h2 {
+        font-size: 14px;
+        margin-top: 6px; /* Reduce top margin for even smaller screens */
+    }
+
+    section div img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tile {
+        margin: 2px; /* Reduce the margin for even smaller screens */
+    }
+
+    a i {
+        font-size: 1em;
+    }
+
+    a p {
+        font-size: 12px;
+    }
+
+    p.footer {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    h2 {
+        font-size: 11px;
+        margin-top: 4px; /* Reduce top margin for the smallest screens */
+    }
+
+    section div img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tile {
+        margin: 1px; /* Reduce the margin for the smallest screens */
+    }
+
+    a i {
+        font-size: 1em;
+    }
+
+    a p {
+        font-size: 12px;
+    }
+
+    p.footer {
+        font-size: 10px;
+    }
 }
 
 /* Media Queries for iPhone 6 */
 @media only screen and (max-device-width: 375px) and (max-device-height: 667px) and (-webkit-device-pixel-ratio: 2) {
     /* Add your styles for iPhone 6 here */
     h2 {
-        font-size: 18px;
-    }
-
-    section div {
-        padding: 15px 10px;
+        font-size: 17px;
     }
 
     section div img {
