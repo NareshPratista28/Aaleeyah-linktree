@@ -10,7 +10,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
-    background-color: #f9f9f9; /* Set a light background color */
+    background-color: #fff;/* Set a light background color */
 }
 
 h2 {
@@ -39,7 +39,6 @@ section div {
     justify-content: center;
     align-items: center;
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 section>div {
@@ -48,6 +47,7 @@ section>div {
 
 section h2{
     margin: 20px;
+    text-align: center;
 }
 
 section div img {
@@ -55,7 +55,7 @@ section div img {
     height: 120px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Add a light shadow to the image */
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);  */
 }
 
 a {
@@ -95,6 +95,13 @@ p.footer {
     font-size: 12px;
     color: #272727;
     margin-top: 20px;
+    font-family: 'Comfortaa' cursive;
+    text-align: center;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 
@@ -150,7 +157,7 @@ p.footer {
     }
 
     p.footer {
-        font-size: 10px;
+        font-size: 9px;
     }
 }
 
@@ -203,7 +210,7 @@ p.footer {
     }
 
     p.footer {
-        font-size: 8px;
+        font-size: 10px;
     }
 }
 
